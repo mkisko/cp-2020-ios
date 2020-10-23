@@ -18,6 +18,16 @@
 		1EC95D9D254346CF001D2242 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95D9C254346CF001D2242 /* UIColor+Hex.swift */; };
 		1EC95DA12543495A001D2242 /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95DA02543495A001D2242 /* AlertPresentable.swift */; };
 		1EC95DA32543497B001D2242 /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95DA22543497B001D2242 /* AlertAction.swift */; };
+		1EC95DA5254352D0001D2242 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95DA4254352D0001D2242 /* Loadable.swift */; };
+		1EC95DA72543549C001D2242 /* ViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95DA62543549C001D2242 /* ViewOutput.swift */; };
+		1EC95DA925435622001D2242 /* EndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95DA825435622001D2242 /* EndpointProtocol.swift */; };
+		1EC95DAC25435A60001D2242 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95DAB25435A60001D2242 /* NetworkService.swift */; };
+		1EC95DAE25435B56001D2242 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95DAD25435B56001D2242 /* Result.swift */; };
+		1EC95DB025435BAC001D2242 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95DAF25435BAC001D2242 /* EmptyResponse.swift */; };
+		1EC95DB225435BEC001D2242 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95DB125435BEC001D2242 /* APIError.swift */; };
+		1EC95DB425435C13001D2242 /* ParsableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95DB325435C13001D2242 /* ParsableError.swift */; };
+		1EC95DB625435C46001D2242 /* PresentableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95DB525435C46001D2242 /* PresentableError.swift */; };
+		1EC95DB825435C8F001D2242 /* SuccessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95DB725435C8F001D2242 /* SuccessModel.swift */; };
 		2798B64B9F33B5AA9BD7441B /* Pods_GCPortal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232B2463783029C1A0F0745F /* Pods_GCPortal.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +45,16 @@
 		1EC95D9C254346CF001D2242 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		1EC95DA02543495A001D2242 /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
 		1EC95DA22543497B001D2242 /* AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
+		1EC95DA4254352D0001D2242 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		1EC95DA62543549C001D2242 /* ViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOutput.swift; sourceTree = "<group>"; };
+		1EC95DA825435622001D2242 /* EndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointProtocol.swift; sourceTree = "<group>"; };
+		1EC95DAB25435A60001D2242 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		1EC95DAD25435B56001D2242 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		1EC95DAF25435BAC001D2242 /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
+		1EC95DB125435BEC001D2242 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		1EC95DB325435C13001D2242 /* ParsableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsableError.swift; sourceTree = "<group>"; };
+		1EC95DB525435C46001D2242 /* PresentableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableError.swift; sourceTree = "<group>"; };
+		1EC95DB725435C8F001D2242 /* SuccessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessModel.swift; sourceTree = "<group>"; };
 		232B2463783029C1A0F0745F /* Pods_GCPortal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GCPortal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2608B506B9276279B671AB32 /* Pods-GCPortal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCPortal.release.xcconfig"; path = "Target Support Files/Pods-GCPortal/Pods-GCPortal.release.xcconfig"; sourceTree = "<group>"; };
 		74F17CA8517E364986662C3D /* Pods-GCPortal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCPortal.debug.xcconfig"; path = "Target Support Files/Pods-GCPortal/Pods-GCPortal.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +124,7 @@
 		1EC95D9025433B60001D2242 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				1EC95DAA254357F3001D2242 /* NetworkService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -164,6 +185,9 @@
 			isa = PBXGroup;
 			children = (
 				1EC95D9F2543493A001D2242 /* AlertPresentable */,
+				1EC95DA4254352D0001D2242 /* Loadable.swift */,
+				1EC95DA62543549C001D2242 /* ViewOutput.swift */,
+				1EC95DA825435622001D2242 /* EndpointProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -175,6 +199,28 @@
 				1EC95DA22543497B001D2242 /* AlertAction.swift */,
 			);
 			path = AlertPresentable;
+			sourceTree = "<group>";
+		};
+		1EC95DAA254357F3001D2242 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				1EC95DAB25435A60001D2242 /* NetworkService.swift */,
+				1EC95DAD25435B56001D2242 /* Result.swift */,
+				1EC95DAF25435BAC001D2242 /* EmptyResponse.swift */,
+				1EC95DB725435C8F001D2242 /* SuccessModel.swift */,
+				1EC95DB925435CD2001D2242 /* Errors */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		1EC95DB925435CD2001D2242 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				1EC95DB125435BEC001D2242 /* APIError.swift */,
+				1EC95DB325435C13001D2242 /* ParsableError.swift */,
+				1EC95DB525435C46001D2242 /* PresentableError.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 		43F615634BC67C9FC7031686 /* Pods */ = {
@@ -310,12 +356,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EC95DA12543495A001D2242 /* AlertPresentable.swift in Sources */,
+				1EC95DAE25435B56001D2242 /* Result.swift in Sources */,
+				1EC95DB425435C13001D2242 /* ParsableError.swift in Sources */,
+				1EC95DA72543549C001D2242 /* ViewOutput.swift in Sources */,
 				1EC95D7F25433A30001D2242 /* ViewController.swift in Sources */,
+				1EC95DB825435C8F001D2242 /* SuccessModel.swift in Sources */,
+				1EC95DA5254352D0001D2242 /* Loadable.swift in Sources */,
 				1EC95DA32543497B001D2242 /* AlertAction.swift in Sources */,
 				1EC95D7B25433A30001D2242 /* AppDelegate.swift in Sources */,
+				1EC95DA925435622001D2242 /* EndpointProtocol.swift in Sources */,
+				1EC95DB225435BEC001D2242 /* APIError.swift in Sources */,
+				1EC95DB625435C46001D2242 /* PresentableError.swift in Sources */,
+				1EC95DB025435BAC001D2242 /* EmptyResponse.swift in Sources */,
 				1EC95D7D25433A30001D2242 /* SceneDelegate.swift in Sources */,
 				1EC95D9D254346CF001D2242 /* UIColor+Hex.swift in Sources */,
 				1EC95D992543444B001D2242 /* InterfaceUtils.swift in Sources */,
+				1EC95DAC25435A60001D2242 /* NetworkService.swift in Sources */,
 				1EC95D96254343D6001D2242 /* ServiceConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
