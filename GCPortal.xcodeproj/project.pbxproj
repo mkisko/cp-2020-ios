@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,12 @@
 		1EC95D8225433A30001D2242 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EC95D8025433A30001D2242 /* Main.storyboard */; };
 		1EC95D8425433A3A001D2242 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EC95D8325433A3A001D2242 /* Assets.xcassets */; };
 		1EC95D8725433A3A001D2242 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EC95D8525433A3A001D2242 /* LaunchScreen.storyboard */; };
+		1EC95D96254343D6001D2242 /* ServiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95D95254343D6001D2242 /* ServiceConstants.swift */; };
+		1EC95D992543444B001D2242 /* InterfaceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95D982543444B001D2242 /* InterfaceUtils.swift */; };
+		1EC95D9D254346CF001D2242 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95D9C254346CF001D2242 /* UIColor+Hex.swift */; };
+		1EC95DA12543495A001D2242 /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95DA02543495A001D2242 /* AlertPresentable.swift */; };
+		1EC95DA32543497B001D2242 /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95DA22543497B001D2242 /* AlertAction.swift */; };
+		2798B64B9F33B5AA9BD7441B /* Pods_GCPortal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232B2463783029C1A0F0745F /* Pods_GCPortal.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,14 @@
 		1EC95D8325433A3A001D2242 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EC95D8625433A3A001D2242 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1EC95D8825433A3A001D2242 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		1EC95D95254343D6001D2242 /* ServiceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConstants.swift; sourceTree = "<group>"; };
+		1EC95D982543444B001D2242 /* InterfaceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceUtils.swift; sourceTree = "<group>"; };
+		1EC95D9C254346CF001D2242 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		1EC95DA02543495A001D2242 /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
+		1EC95DA22543497B001D2242 /* AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
+		232B2463783029C1A0F0745F /* Pods_GCPortal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GCPortal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2608B506B9276279B671AB32 /* Pods-GCPortal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCPortal.release.xcconfig"; path = "Target Support Files/Pods-GCPortal/Pods-GCPortal.release.xcconfig"; sourceTree = "<group>"; };
+		74F17CA8517E364986662C3D /* Pods-GCPortal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCPortal.debug.xcconfig"; path = "Target Support Files/Pods-GCPortal/Pods-GCPortal.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2798B64B9F33B5AA9BD7441B /* Pods_GCPortal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +57,8 @@
 			children = (
 				1EC95D7925433A30001D2242 /* GCPortal */,
 				1EC95D7825433A30001D2242 /* Products */,
+				43F615634BC67C9FC7031686 /* Pods */,
+				57F6FFAD983EFAA0C245EC60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +94,9 @@
 		1EC95D8F25433B52001D2242 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1EC95D9E25434934001D2242 /* Protocols */,
+				1EC95D9A25434691001D2242 /* Extensions */,
+				1EC95D94254343B9001D2242 /* Constants */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -115,6 +135,65 @@
 			path = Applications;
 			sourceTree = "<group>";
 		};
+		1EC95D94254343B9001D2242 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				1EC95D95254343D6001D2242 /* ServiceConstants.swift */,
+				1EC95D982543444B001D2242 /* InterfaceUtils.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		1EC95D9A25434691001D2242 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1EC95D9B254346B1001D2242 /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1EC95D9B254346B1001D2242 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				1EC95D9C254346CF001D2242 /* UIColor+Hex.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		1EC95D9E25434934001D2242 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1EC95D9F2543493A001D2242 /* AlertPresentable */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		1EC95D9F2543493A001D2242 /* AlertPresentable */ = {
+			isa = PBXGroup;
+			children = (
+				1EC95DA02543495A001D2242 /* AlertPresentable.swift */,
+				1EC95DA22543497B001D2242 /* AlertAction.swift */,
+			);
+			path = AlertPresentable;
+			sourceTree = "<group>";
+		};
+		43F615634BC67C9FC7031686 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74F17CA8517E364986662C3D /* Pods-GCPortal.debug.xcconfig */,
+				2608B506B9276279B671AB32 /* Pods-GCPortal.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		57F6FFAD983EFAA0C245EC60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				232B2463783029C1A0F0745F /* Pods_GCPortal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,9 +201,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1EC95D8B25433A3A001D2242 /* Build configuration list for PBXNativeTarget "GCPortal" */;
 			buildPhases = (
+				43E6C2D16878F90BD8648E97 /* [CP] Check Pods Manifest.lock */,
 				1EC95D7325433A30001D2242 /* Sources */,
 				1EC95D7425433A30001D2242 /* Frameworks */,
 				1EC95D7525433A30001D2242 /* Resources */,
+				EF052F118306A2021D94A266 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,14 +262,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		43E6C2D16878F90BD8648E97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GCPortal-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF052F118306A2021D94A266 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GCPortal/Pods-GCPortal-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GCPortal/Pods-GCPortal-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GCPortal/Pods-GCPortal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1EC95D7325433A30001D2242 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EC95DA12543495A001D2242 /* AlertPresentable.swift in Sources */,
 				1EC95D7F25433A30001D2242 /* ViewController.swift in Sources */,
+				1EC95DA32543497B001D2242 /* AlertAction.swift in Sources */,
 				1EC95D7B25433A30001D2242 /* AppDelegate.swift in Sources */,
 				1EC95D7D25433A30001D2242 /* SceneDelegate.swift in Sources */,
+				1EC95D9D254346CF001D2242 /* UIColor+Hex.swift in Sources */,
+				1EC95D992543444B001D2242 /* InterfaceUtils.swift in Sources */,
+				1EC95D96254343D6001D2242 /* ServiceConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +458,7 @@
 		};
 		1EC95D8C25433A3A001D2242 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74F17CA8517E364986662C3D /* Pods-GCPortal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -348,6 +477,7 @@
 		};
 		1EC95D8D25433A3A001D2242 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2608B506B9276279B671AB32 /* Pods-GCPortal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
