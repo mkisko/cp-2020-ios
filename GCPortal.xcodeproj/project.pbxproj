@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1EC95D7B25433A30001D2242 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95D7A25433A30001D2242 /* AppDelegate.swift */; };
 		1EC95D7D25433A30001D2242 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95D7C25433A30001D2242 /* SceneDelegate.swift */; };
-		1EC95D7F25433A30001D2242 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95D7E25433A30001D2242 /* ViewController.swift */; };
+		1EC95D7F25433A30001D2242 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95D7E25433A30001D2242 /* HomeViewController.swift */; };
 		1EC95D8225433A30001D2242 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EC95D8025433A30001D2242 /* Main.storyboard */; };
 		1EC95D8425433A3A001D2242 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EC95D8325433A3A001D2242 /* Assets.xcassets */; };
 		1EC95D8725433A3A001D2242 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EC95D8525433A3A001D2242 /* LaunchScreen.storyboard */; };
@@ -28,6 +28,7 @@
 		1EC95DB425435C13001D2242 /* ParsableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95DB325435C13001D2242 /* ParsableError.swift */; };
 		1EC95DB625435C46001D2242 /* PresentableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95DB525435C46001D2242 /* PresentableError.swift */; };
 		1EC95DB825435C8F001D2242 /* SuccessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95DB725435C8F001D2242 /* SuccessModel.swift */; };
+		1EC95DBF25436A08001D2242 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95DBE25436A08001D2242 /* HomePresenter.swift */; };
 		2798B64B9F33B5AA9BD7441B /* Pods_GCPortal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232B2463783029C1A0F0745F /* Pods_GCPortal.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +36,7 @@
 		1EC95D7725433A30001D2242 /* GCPortal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCPortal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EC95D7A25433A30001D2242 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EC95D7C25433A30001D2242 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1EC95D7E25433A30001D2242 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1EC95D7E25433A30001D2242 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1EC95D8125433A30001D2242 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1EC95D8325433A3A001D2242 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EC95D8625433A3A001D2242 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 		1EC95DB325435C13001D2242 /* ParsableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsableError.swift; sourceTree = "<group>"; };
 		1EC95DB525435C46001D2242 /* PresentableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableError.swift; sourceTree = "<group>"; };
 		1EC95DB725435C8F001D2242 /* SuccessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessModel.swift; sourceTree = "<group>"; };
+		1EC95DBE25436A08001D2242 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		232B2463783029C1A0F0745F /* Pods_GCPortal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GCPortal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2608B506B9276279B671AB32 /* Pods-GCPortal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCPortal.release.xcconfig"; path = "Target Support Files/Pods-GCPortal/Pods-GCPortal.release.xcconfig"; sourceTree = "<group>"; };
 		74F17CA8517E364986662C3D /* Pods-GCPortal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCPortal.debug.xcconfig"; path = "Target Support Files/Pods-GCPortal/Pods-GCPortal.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,7 +99,6 @@
 				1EC95D8E25433B38001D2242 /* Modules */,
 				1EC95D9025433B60001D2242 /* Services */,
 				1EC95D8F25433B52001D2242 /* Common */,
-				1EC95D9125433BA2001D2242 /* Models */,
 				1EC95D9225433BB3001D2242 /* Resources */,
 			);
 			path = GCPortal;
@@ -106,7 +107,7 @@
 		1EC95D8E25433B38001D2242 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				1EC95D7E25433A30001D2242 /* ViewController.swift */,
+				1EC95DBA254369D8001D2242 /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -127,13 +128,6 @@
 				1EC95DAA254357F3001D2242 /* NetworkService */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		1EC95D9125433BA2001D2242 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		1EC95D9225433BB3001D2242 /* Resources */ = {
@@ -221,6 +215,39 @@
 				1EC95DB525435C46001D2242 /* PresentableError.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		1EC95DBA254369D8001D2242 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1EC95DBD254369F7001D2242 /* Model */,
+				1EC95DBC254369EF001D2242 /* Presenter */,
+				1EC95DBB254369E7001D2242 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1EC95DBB254369E7001D2242 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1EC95D7E25433A30001D2242 /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1EC95DBC254369EF001D2242 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1EC95DBE25436A08001D2242 /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1EC95DBD254369F7001D2242 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		43F615634BC67C9FC7031686 /* Pods */ = {
@@ -359,7 +386,7 @@
 				1EC95DAE25435B56001D2242 /* Result.swift in Sources */,
 				1EC95DB425435C13001D2242 /* ParsableError.swift in Sources */,
 				1EC95DA72543549C001D2242 /* ViewOutput.swift in Sources */,
-				1EC95D7F25433A30001D2242 /* ViewController.swift in Sources */,
+				1EC95D7F25433A30001D2242 /* HomeViewController.swift in Sources */,
 				1EC95DB825435C8F001D2242 /* SuccessModel.swift in Sources */,
 				1EC95DA5254352D0001D2242 /* Loadable.swift in Sources */,
 				1EC95DA32543497B001D2242 /* AlertAction.swift in Sources */,
@@ -369,6 +396,7 @@
 				1EC95DB625435C46001D2242 /* PresentableError.swift in Sources */,
 				1EC95DB025435BAC001D2242 /* EmptyResponse.swift in Sources */,
 				1EC95D7D25433A30001D2242 /* SceneDelegate.swift in Sources */,
+				1EC95DBF25436A08001D2242 /* HomePresenter.swift in Sources */,
 				1EC95D9D254346CF001D2242 /* UIColor+Hex.swift in Sources */,
 				1EC95D992543444B001D2242 /* InterfaceUtils.swift in Sources */,
 				1EC95DAC25435A60001D2242 /* NetworkService.swift in Sources */,

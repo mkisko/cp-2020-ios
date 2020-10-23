@@ -8,13 +8,24 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+protocol HomePresenterProtocol {
+    
+}
+
+final class HomeViewController: UIViewController, AlertPresentable, Loadable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
+    // MARK: - Properties
+    
+    lazy var presenter: HomePresenter {
+        
+    }()
 
 }
 
+extension HomeViewController: HomePresenterProtocol {
+    
+}
