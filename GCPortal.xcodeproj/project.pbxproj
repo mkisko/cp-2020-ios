@@ -23,7 +23,7 @@
 		1EC95D8125433A30001D2242 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1EC95D8325433A3A001D2242 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EC95D8625433A3A001D2242 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1EC95D8825433A3A001D2242 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EC95D8825433A3A001D2242 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,63 @@
 		1EC95D7925433A30001D2242 /* GCPortal */ = {
 			isa = PBXGroup;
 			children = (
-				1EC95D7A25433A30001D2242 /* AppDelegate.swift */,
-				1EC95D7C25433A30001D2242 /* SceneDelegate.swift */,
-				1EC95D7E25433A30001D2242 /* ViewController.swift */,
-				1EC95D8025433A30001D2242 /* Main.storyboard */,
-				1EC95D8325433A3A001D2242 /* Assets.xcassets */,
-				1EC95D8525433A3A001D2242 /* LaunchScreen.storyboard */,
-				1EC95D8825433A3A001D2242 /* Info.plist */,
+				1EC95D9325433BE0001D2242 /* Applications */,
+				1EC95D8E25433B38001D2242 /* Modules */,
+				1EC95D9025433B60001D2242 /* Services */,
+				1EC95D8F25433B52001D2242 /* Common */,
+				1EC95D9125433BA2001D2242 /* Models */,
+				1EC95D9225433BB3001D2242 /* Resources */,
 			);
 			path = GCPortal;
+			sourceTree = "<group>";
+		};
+		1EC95D8E25433B38001D2242 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1EC95D7E25433A30001D2242 /* ViewController.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1EC95D8F25433B52001D2242 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1EC95D9025433B60001D2242 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1EC95D9125433BA2001D2242 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1EC95D9225433BB3001D2242 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1EC95D8325433A3A001D2242 /* Assets.xcassets */,
+				1EC95D8825433A3A001D2242 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1EC95D9325433BE0001D2242 /* Applications */ = {
+			isa = PBXGroup;
+			children = (
+				1EC95D8525433A3A001D2242 /* LaunchScreen.storyboard */,
+				1EC95D8025433A30001D2242 /* Main.storyboard */,
+				1EC95D7A25433A30001D2242 /* AppDelegate.swift */,
+				1EC95D7C25433A30001D2242 /* SceneDelegate.swift */,
+			);
+			path = Applications;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
