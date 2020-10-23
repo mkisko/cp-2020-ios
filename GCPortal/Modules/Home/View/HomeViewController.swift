@@ -8,11 +8,11 @@
 
 import UIKit
 
-protocol HomePresenterProtocol {
+protocol HomePresenterProtocol: AlertPresentable, Loadable {
     
 }
 
-final class HomeViewController: UIViewController, AlertPresentable, Loadable {
+final class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +20,11 @@ final class HomeViewController: UIViewController, AlertPresentable, Loadable {
 
     // MARK: - Properties
     
-    lazy var presenter: HomePresenter {
-        
-    }()
+    var presenter: HomePresenter {
+        let presenter = HomePresenter()
+        presenter.view = self
+        return presenter
+    }
 
 }
 

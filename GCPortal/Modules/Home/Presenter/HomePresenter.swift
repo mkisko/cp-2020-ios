@@ -14,6 +14,8 @@ protocol HomeViewProtocol: ViewOutput {
 
 final class HomePresenter {
     
+    weak var view: HomePresenterProtocol?
+    
 }
 
 
