@@ -9,13 +9,16 @@
 import UIKit
 
 protocol HomePresenterProtocol: AlertPresentable, Loadable {
-    
+    func update()
 }
 
 final class HomeViewController: UIViewController {
 
+    // MARK: - Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.viewIsReady()
     }
 
     // MARK: - Properties
@@ -29,5 +32,8 @@ final class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: HomePresenterProtocol {
-    
+    func update() {
+        
+    }
+
 }
