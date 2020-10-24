@@ -63,7 +63,7 @@ extension HomeViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: row.reuseId, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath)
         row.configurator.configure(cell: cell)
         
         return cell
@@ -76,7 +76,9 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: HomePresenterProtocol {
     
     func update(with viewModel: HomeViewModel) {
-        
+        print(viewModel)
+        self.viewModel = viewModel
+        tableView.reloadData()
     }
 
 }
