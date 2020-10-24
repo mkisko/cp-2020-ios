@@ -67,6 +67,11 @@
 		1EC95E252543E4CB001D2242 /* VacancyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95E242543E4CB001D2242 /* VacancyViewModel.swift */; };
 		1EC95E272543E4DA001D2242 /* VacancyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95E262543E4DA001D2242 /* VacancyRouter.swift */; };
 		1EC95E292543E4EB001D2242 /* VacancyAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95E282543E4EB001D2242 /* VacancyAssembly.swift */; };
+		1EC95E2B25440D3C001D2242 /* VacancyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95E2A25440D3C001D2242 /* VacancyModel.swift */; };
+		1EC95E2D25440DAF001D2242 /* SkillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95E2C25440DAF001D2242 /* SkillModel.swift */; };
+		1EC95E2F25440F4F001D2242 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95E2E25440F4F001D2242 /* UserModel.swift */; };
+		1EC95E32254415E1001D2242 /* VacancyDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95E31254415E1001D2242 /* VacancyDataProvider.swift */; };
+		1EC95E35254416F7001D2242 /* VacancyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95E34254416F7001D2242 /* VacancyCell.swift */; };
 		2798B64B9F33B5AA9BD7441B /* Pods_GCPortal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232B2463783029C1A0F0745F /* Pods_GCPortal.framework */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +138,11 @@
 		1EC95E242543E4CB001D2242 /* VacancyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyViewModel.swift; sourceTree = "<group>"; };
 		1EC95E262543E4DA001D2242 /* VacancyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyRouter.swift; sourceTree = "<group>"; };
 		1EC95E282543E4EB001D2242 /* VacancyAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyAssembly.swift; sourceTree = "<group>"; };
+		1EC95E2A25440D3C001D2242 /* VacancyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyModel.swift; sourceTree = "<group>"; };
+		1EC95E2C25440DAF001D2242 /* SkillModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillModel.swift; sourceTree = "<group>"; };
+		1EC95E2E25440F4F001D2242 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		1EC95E31254415E1001D2242 /* VacancyDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyDataProvider.swift; sourceTree = "<group>"; };
+		1EC95E34254416F7001D2242 /* VacancyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyCell.swift; sourceTree = "<group>"; };
 		232B2463783029C1A0F0745F /* Pods_GCPortal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GCPortal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2608B506B9276279B671AB32 /* Pods-GCPortal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCPortal.release.xcconfig"; path = "Target Support Files/Pods-GCPortal/Pods-GCPortal.release.xcconfig"; sourceTree = "<group>"; };
 		74F17CA8517E364986662C3D /* Pods-GCPortal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCPortal.debug.xcconfig"; path = "Target Support Files/Pods-GCPortal/Pods-GCPortal.debug.xcconfig"; sourceTree = "<group>"; };
@@ -536,6 +546,9 @@
 			isa = PBXGroup;
 			children = (
 				1EC95E242543E4CB001D2242 /* VacancyViewModel.swift */,
+				1EC95E2A25440D3C001D2242 /* VacancyModel.swift */,
+				1EC95E2C25440DAF001D2242 /* SkillModel.swift */,
+				1EC95E2E25440F4F001D2242 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -551,6 +564,7 @@
 		1EC95E1C2543E42D001D2242 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				1EC95E30254415CC001D2242 /* DataProvider */,
 				1EC95E202543E4A7001D2242 /* VacancyPresenter.swift */,
 			);
 			path = Presenter;
@@ -559,9 +573,26 @@
 		1EC95E1D2543E434001D2242 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1EC95E332544165D001D2242 /* Cells */,
 				1EC95E1E2543E495001D2242 /* VacancyViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		1EC95E30254415CC001D2242 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				1EC95E31254415E1001D2242 /* VacancyDataProvider.swift */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		1EC95E332544165D001D2242 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1EC95E34254416F7001D2242 /* VacancyCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		43F615634BC67C9FC7031686 /* Pods */ = {
@@ -699,6 +730,7 @@
 				1EC95E0A2543B8EB001D2242 /* LaunchAssembly.swift in Sources */,
 				1EC95DA12543495A001D2242 /* AlertPresentable.swift in Sources */,
 				1EC95E172543D80D001D2242 /* UINavigationBar+Extensions.swift in Sources */,
+				1EC95E35254416F7001D2242 /* VacancyCell.swift in Sources */,
 				1EC95DD6254395FF001D2242 /* TableView+Register.swift in Sources */,
 				1EC95E292543E4EB001D2242 /* VacancyAssembly.swift in Sources */,
 				1EC95E152543CDED001D2242 /* UIView+borders.swift in Sources */,
@@ -718,8 +750,10 @@
 				1EC95DE82543AE8B001D2242 /* HomeRouter.swift in Sources */,
 				1EC95DB425435C13001D2242 /* ParsableError.swift in Sources */,
 				1EC95DA72543549C001D2242 /* ViewOutput.swift in Sources */,
+				1EC95E2D25440DAF001D2242 /* SkillModel.swift in Sources */,
 				1EC95E1F2543E495001D2242 /* VacancyViewController.swift in Sources */,
 				1EC95E232543E4B8001D2242 /* VacancyInteractor.swift in Sources */,
+				1EC95E32254415E1001D2242 /* VacancyDataProvider.swift in Sources */,
 				1EC95E042543B80A001D2242 /* LaunchViewController.swift in Sources */,
 				1EC95DF52543B451001D2242 /* MainTabBarViewInput.swift in Sources */,
 				1EC95DF32543B12C001D2242 /* ModuleTransitionHandler.swift in Sources */,
@@ -742,6 +776,7 @@
 				1EC95DBF25436A08001D2242 /* HomePresenter.swift in Sources */,
 				1EC95E0C2543B8FE001D2242 /* LaunchRouter.swift in Sources */,
 				1EC95E062543B826001D2242 /* LaunchPresenter.swift in Sources */,
+				1EC95E2B25440D3C001D2242 /* VacancyModel.swift in Sources */,
 				1EC95D9D254346CF001D2242 /* UIColor+Hex.swift in Sources */,
 				1EC95DD825439B71001D2242 /* HomeViewModel.swift in Sources */,
 				1EC95D992543444B001D2242 /* InterfaceUtils.swift in Sources */,
@@ -752,6 +787,7 @@
 				1EC95E272543E4DA001D2242 /* VacancyRouter.swift in Sources */,
 				1EC95DCC254381B7001D2242 /* Configurable.swift in Sources */,
 				1EC95D96254343D6001D2242 /* ServiceConstants.swift in Sources */,
+				1EC95E2F25440F4F001D2242 /* UserModel.swift in Sources */,
 				1EC95E132543CD41001D2242 /* ColorConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

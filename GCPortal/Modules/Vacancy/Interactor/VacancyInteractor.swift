@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+protocol VacancyInteractorInput {
+    
+}
+
+final class VacancyInteractor {
+    
+    weak var presenter: VacancyInteractorOutput?
+    
+}
+
+extension VacancyInteractor: VacancyInteractorInput {
+    
+}

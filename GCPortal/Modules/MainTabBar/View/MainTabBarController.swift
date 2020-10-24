@@ -43,26 +43,26 @@ enum TabBarItem: Int, CaseIterable {
     var image: UIImage? {
         switch self {
         case .home:
-            return UIImage(named: "info")
+            return UIImage(named: "git-merge")
         case .vacancy:
-            return UIImage(named: "info")
+            return UIImage(named: "search")
         case .feedback:
-            return UIImage(named: "info")
+            return UIImage(named: "file-minus")
         case .profile:
-            return UIImage(named: "info")
+            return UIImage(named: "user")
         }
     }
     
     var selectedImage: UIImage? {
         switch self {
         case .home:
-            return UIImage(named: "info")
+            return UIImage(named: "git-merge")
         case .vacancy:
-            return UIImage(named: "info")
+            return UIImage(named: "search")
         case .feedback:
-            return UIImage(named: "info")
+            return UIImage(named: "file-minus")
         case .profile:
-            return UIImage(named: "info")
+            return UIImage(named: "user")
         }
         
     }

@@ -8,14 +8,31 @@
 
 import Foundation
 
-protocol VacancyViewOutput {
+protocol VacancyViewOutput: ViewOutput {
     
 }
 
-protocol VacancyInteractorOutput {
+protocol VacancyInteractorOutput: class {
     
 }
 
 final class VacancyPresenter {
+    
+    weak var view: VacancyViewInput?
+    var interactor: VacancyInteractorInput?
+    var router: VacancyRouterInput?
+    
+    private let dataProvider: VacancyDataProviderInput
+    
+    init(dataProvider: VacancyDataProviderInput) {
+        self.dataProvider = dataProvider
+    }
+}
+
+extension VacancyPresenter: VacancyViewOutput {
+    
+}
+
+extension VacancyPresenter: VacancyInteractorOutput {
     
 }

@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+protocol VacancyRouterInput {
+    
+}
+
+final class VacancyRouter {
+    
+    weak var transition: ModuleTransitionHandler?
+    
+    init(transition: ModuleTransitionHandler?) {
+        self.transition = transition
+    }
+    
+}
+
+extension VacancyRouter: VacancyRouterInput {
+    
+}

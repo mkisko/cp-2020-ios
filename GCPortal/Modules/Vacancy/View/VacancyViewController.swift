@@ -8,11 +8,16 @@
 
 import UIKit
 
-protocol VacancyViewInput {
+protocol VacancyViewInput: Loadable, AlertPresentable {
     
 }
-class VacancyViewController: UIViewController {
 
+final class VacancyViewController: UIViewController {
+
+    var presenter: VacancyViewOutput?
+    
+    private var viewModel: VacancyViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
