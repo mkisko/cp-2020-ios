@@ -12,15 +12,22 @@ protocol HomeViewOutput: ViewOutput {
     
 }
 
-protocol HomeInteractorOutput {
+protocol HomeInteractorOutput: class {
     
 }
 
 final class HomePresenter {
     
     weak var view: HomeViewInput?
+    var interactor: HomeInteractorInput?
+    var router: HomeRouterInput?
     
-    private let dataProvider = HomeDataProvider()
+    private let dataProvider: HomeDataProviderInput
+    
+    init(dataProvider: HomeDataProviderInput) {
+        self.dataProvider = dataProvider
+    }
+    
 }
 
 
@@ -28,13 +35,17 @@ final class HomePresenter {
 extension HomePresenter: HomeViewOutput {
     
     func viewIsReady() {
-        let first = HomeModel(course: "1-2 КУРС", isComplete: true, salary: "20 000 - 40 000 рублей", vacancyCount: 8)
-        let second = HomeModel(course: "3-4 КУРС", isComplete: true, salary: "40 000 - 60 000 рублей", vacancyCount: 15)
-        let third = HomeModel(course: "Аспирантура", isComplete: false, salary: "100 000 - 200 000 рублей", vacancyCount: 21)
+        let first = HomeModel(id: 5, status: 1, course: "1 семестр", vacancyCount: 5, salaryMin: 20000, salaryMax: 25000)
+        let second = HomeModel(id: 6, status: 1, course: "2 семестр", vacancyCount: 5, salaryMin: 20000, salaryMax: 25000)
+        let third = HomeModel(id: 7, status: 0, course: "3 семестр", vacancyCount: 7, salaryMin: 30000, salaryMax: 35000)
         let array = [first, second, third]
         
         let viewModel = dataProvider.createViewModel(data: array)
         view?.update(with: viewModel)
     }
+    
+}
+
+extension HomePresenter: HomeInteractorOutput {
     
 }

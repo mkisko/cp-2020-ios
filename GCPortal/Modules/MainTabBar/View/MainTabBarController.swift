@@ -17,7 +17,7 @@ enum TabBarItem: Int, CaseIterable {
     var viewController: UIViewController {
         switch self {
         case .home:
-            return UIViewController()
+            return HomeAssembly.assembleModule()
         case .vacancy:
             return UIViewController()
         case .feedback:

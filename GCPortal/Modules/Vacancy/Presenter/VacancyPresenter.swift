@@ -1,5 +1,5 @@
 //
-//  HomeInteractor.swift
+//  VacancyPresenter.swift
 //  GCPortal
 //
 //  Created by Айдин Абдурахманов on 24.10.2020.
@@ -8,16 +8,14 @@
 
 import Foundation
 
-protocol HomeInteractorInput {
+protocol VacancyViewOutput {
     
 }
 
-final class HomeInteractor {
-    
-    weak var presenter: HomeInteractorOutput?
+protocol VacancyInteractorOutput {
     
 }
 
-extension HomeInteractor: HomeInteractorInput {
+final class VacancyPresenter {
     
 }

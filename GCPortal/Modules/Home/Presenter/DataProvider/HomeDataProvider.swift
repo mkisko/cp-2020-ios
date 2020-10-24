@@ -25,10 +25,7 @@ final class HomeDataProvider: HomeDataProviderInput {
         
         var rows: [HomeViewModel.Row] = []
         
-        data.forEach { rows.append(.home(configurator: HomeCellConfigurator(item: HomeCell.Model(course: $0.course,
-                                                                                                 isComplete: $0.isComplete,
-                                                                                                 salary: $0.salary,
-                                                                                                 vacancyCount: $0.vacancyCount)))) }
+        data.forEach { rows.append(.home(configurator: HomeCellConfigurator(item: $0))) }
         
         return HomeViewModel(rows: rows)
     }

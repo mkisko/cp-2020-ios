@@ -10,6 +10,7 @@ import UIKit
 
 class HomeCell: UITableViewCell {
 
+    var backView = UIView()
     var fotoImageView = UIImageView()
     var courseLabel = UILabel()
     var checkImageView = UIImageView()
@@ -29,46 +30,110 @@ class HomeCell: UITableViewCell {
     }
     
     private func setupSubviews() {
-        fotoImageView.layer.cornerRadius = 10
+        self.backgroundColor = UIColor(rgb: 0xE5E5E5)
+        self.selectionStyle = .none
         
+        backView.backgroundColor = .white
+        backView.cornerRadius = 8
+        addSubview(backView)
+        backView.autoSetDimension(.height, toSize: 127)
+        backView.autoPinEdge(toSuperviewEdge: .top, withInset: 10)
+        backView.autoPinEdge(toSuperviewEdge: .left, withInset: 16)
+        backView.autoPinEdge(toSuperviewEdge: .right, withInset: 16)
+        backView.autoPinEdge(toSuperviewEdge: .bottom, withInset: 10)
+
+        fotoImageView.contentMode = .scaleAspectFit
+        fotoImageView.cornerRadius = 10
+        fotoImageView.backgroundColor = .green
+        backView.addSubview(fotoImageView)
+        fotoImageView.autoSetDimensions(to: CGSize(width: 36, height: 36))
+        fotoImageView.autoPinEdge(toSuperviewEdge: .top, withInset: 10)
+        fotoImageView.autoPinEdge(toSuperviewEdge: .left, withInset: 14)
+
+
         courseLabel.font = UIFont(name: "SFProText-Semibold", size: 17)
         courseLabel.textColor = .black
+        courseLabel.textAlignment = .left
+        backView.addSubview(courseLabel)
+        courseLabel.autoPinEdge(toSuperviewEdge: .top, withInset: 19)
+        courseLabel.autoPinEdge(.left, to: .right, of: fotoImageView, withOffset: 8)
         
+        checkImageView.backgroundColor = .clear
+        checkImageView.contentMode = .scaleAspectFit
+        checkImageView.backgroundColor = .black
+        backView.addSubview(checkImageView)
+        checkImageView.autoSetDimensions(to: CGSize(width: 24, height: 24))
+        checkImageView.autoPinEdge(toSuperviewEdge: .top, withInset: 17)
+        checkImageView.autoPinEdge(toSuperviewEdge: .right, withInset: 12)
+
+        courseLabel.autoPinEdge(.right, to: .left, of: checkImageView, withOffset: 10)
+
+        
+
         salaryLabel.font = UIFont(name: "SFProText-Regular", size: 13)
         salaryLabel.textColor = UIColor(rgb: 0x8F92A1)
+        salaryLabel.textAlignment = .left
         salaryLabel.text = "Уровень зарплат"
+        backView.addSubview(salaryLabel)
+        salaryLabel.autoSetDimensions(to: CGSize(width: 150, height: 18))
+        salaryLabel.autoPinEdge(.top, to: .bottom, of: fotoImageView, withOffset: 23)
+        salaryLabel.autoPinEdge(toSuperviewEdge: .left, withInset: 14)
+        salaryLabel.autoPinEdge(toSuperviewEdge: .right, withInset: 16)
+        
         
         salaryLevelLabel.font = UIFont(name: "SFProText-Semibold", size: 15)
         salaryLevelLabel.textColor = .black
+        backView.addSubview(salaryLevelLabel)
+        salaryLevelLabel.autoSetDimensions(to: CGSize(width: 150, height: 15))
+        salaryLevelLabel.autoPinEdge(.top, to: .bottom, of: salaryLabel, withOffset: 4)
+        salaryLevelLabel.autoPinEdge(toSuperviewEdge: .left, withInset: 14)
+        salaryLevelLabel.autoPinEdge(toSuperviewEdge: .bottom, withInset: 15)
         
-        circleView.clipsToBounds = true
-        circleView.layer.cornerRadius = 3
         
-        vacancyCountLabel.font = UIFont(name: "SFProText-Regular", size: 13)
+        
+        vacancyCountLabel.font = UIFont(name: "SFProText-Regular", size: 8)
         vacancyCountLabel.textColor = .black
+        vacancyCountLabel.adjustsFontSizeToFitWidth = true
+        backView.addSubview(vacancyCountLabel)
+        vacancyCountLabel.autoSetDimension(.width, toSize: 75)
+        vacancyCountLabel.autoPinEdge(.top, to: .bottom, of: checkImageView, withOffset: 53)
+        vacancyCountLabel.autoPinEdge(toSuperviewEdge: .right, withInset: 14)
+        vacancyCountLabel.autoPinEdge(toSuperviewEdge: .bottom, withInset: 15)
+//        circleView.autoPinEdge(.right, to: .left, of: vacancyCountLabel,withOffset: 4)
+       
+        circleView.cornerRadius = 3
+        circleView.autoSetDimensions(to: CGSize(width: 6, height: 6))
+        backView.addSubview(circleView)
+        circleView.autoPinEdge(toSuperviewEdge: .top, withInset: 106)
+        circleView.autoPinEdge(.right, to: .left, of: vacancyCountLabel,withOffset: 4)
+        circleView.autoPinEdge(.left, to: .right, of: salaryLevelLabel)
+        circleView.autoPinEdge(toSuperviewEdge: .bottom,withInset: 15)
+        
+
+
+        
+        
+        
+       
+
     }
 }
 
 
 extension HomeCell: Configurable {
     
-    struct Model {
-        let course: String
-        let isComplete: Bool
-        let salary: String
-        let vacancyCount: Int
-    }
+    typealias Model = HomeModel
     
     func configure(with model: Model) {
         courseLabel.text = model.course
         
-        if model.isComplete {
+        if model.status == 1 {
             checkImageView.isHidden = false
         } else {
             checkImageView.isHidden = true
         }
         
-        salaryLevelLabel.text = model.salary
+        salaryLevelLabel.text = "\(model.salaryMin) - \(model.salaryMax) ₽"
         
         switch model.vacancyCount {
         case 1:

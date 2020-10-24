@@ -10,16 +10,20 @@ import Foundation
 
 struct HomeModel: Decodable {
     
+    let id: Int
+    let status: Int
     let course: String
-    let isComplete: Bool
-    let salary: String
     let vacancyCount: Int
+    let salaryMin: Int
+    let salaryMax: Int
     
     enum CodingKeys: String, CodingKey {
-        case course = ""
-        case isComplete = "a"
-        case salary = "b"
-        case vacancyCount = "c"
+        case id = "id"
+        case status = "status"
+        case course = "stageName"
+        case vacancyCount = "vacancyCount"
+        case salaryMin = "costMin"
+        case salaryMax = "costMax"
     }
     
 }
