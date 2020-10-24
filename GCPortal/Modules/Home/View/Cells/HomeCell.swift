@@ -10,14 +10,14 @@ import UIKit
 
 class HomeCell: UITableViewCell {
 
-    @IBOutlet var fotoImageView: UIImageView!
-    @IBOutlet var courseLabel: UILabel!
-    @IBOutlet var checkImageView: UIImageView!
-    @IBOutlet var salaryLabel: UILabel!
-    @IBOutlet var salaryLevelLabel: UILabel!
-    @IBOutlet var circleView: UIView!
-    @IBOutlet var vacancyCountLabel: UILabel!
-    @IBOutlet var vacancyStackView: UIStackView!
+    var fotoImageView = UIImageView()
+    var courseLabel = UILabel()
+    var checkImageView = UIImageView()
+    var salaryLabel = UILabel()
+    var salaryLevelLabel = UILabel()
+    var circleView = UIView()
+    var vacancyCountLabel = UILabel()
+    var vacancyStackView = UIStackView()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

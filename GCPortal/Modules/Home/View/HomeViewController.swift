@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol HomePresenterProtocol: AlertPresentable, Loadable {
+protocol HomeViewInput: AlertPresentable, Loadable {
     func update(with viewModel: HomeViewModel)
 }
 
 final class HomeViewController: UIViewController {
 
-    @IBOutlet var tableView: UITableView!
+    var tableView = UITableView()
     // MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -63,7 +63,7 @@ extension HomeViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: row.reuseId, for: indexPath)
         row.configurator.configure(cell: cell)
         
         return cell
@@ -73,7 +73,7 @@ extension HomeViewController: UITableViewDataSource {
 
 
 // MARK: - HomePresenterProtocol
-extension HomeViewController: HomePresenterProtocol {
+extension HomeViewController: HomeViewInput {
     
     func update(with viewModel: HomeViewModel) {
         print(viewModel)

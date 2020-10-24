@@ -8,20 +8,24 @@
 
 import Foundation
 
-protocol HomeViewProtocol: ViewOutput {
+protocol HomeViewOutput: ViewOutput {
+    
+}
+
+protocol HomeInteractorOutput {
     
 }
 
 final class HomePresenter {
     
-    weak var view: HomePresenterProtocol?
+    weak var view: HomeViewInput?
     
     private let dataProvider = HomeDataProvider()
 }
 
 
 // MARK: - HomeViewProtocol
-extension HomePresenter: HomeViewProtocol {
+extension HomePresenter: HomeViewOutput {
     
     func viewIsReady() {
         let first = HomeModel(course: "1-2 КУРС", isComplete: true, salary: "20 000 - 40 000 рублей", vacancyCount: 8)
