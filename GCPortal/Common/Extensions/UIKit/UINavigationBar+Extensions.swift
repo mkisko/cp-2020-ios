@@ -40,6 +40,7 @@ extension UINavigationBar {
         titleTextAttributes = [NSAttributedString.Key.foregroundColor: color]
     }
     
+    
     // MARK: - get statusBar, or create statusBar
     
     

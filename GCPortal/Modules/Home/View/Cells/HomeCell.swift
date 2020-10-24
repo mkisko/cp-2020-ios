@@ -18,7 +18,6 @@ class HomeCell: UITableViewCell {
     var salaryLevelLabel = UILabel()
 //    var circleView = UIView()
     var vacancyCountLabel = UILabel()
-    var vacancyStackView = UIStackView()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -51,7 +50,7 @@ class HomeCell: UITableViewCell {
         fotoImageView.autoPinEdge(toSuperviewEdge: .left, withInset: 14)
 
 
-        courseLabel.font = UIFont(name: "SFProText-Semibold", size: 17)
+        courseLabel.font = UIFont.boldSystemFont(ofSize: 17)
         courseLabel.textColor = .black
         courseLabel.textAlignment = .left
         backView.addSubview(courseLabel)
@@ -70,7 +69,7 @@ class HomeCell: UITableViewCell {
 
         
 
-        salaryLabel.font = UIFont(name: "SFProText-Regular", size: 13)
+        salaryLabel.font = UIFont.systemFont(ofSize: 13)
         salaryLabel.textColor = UIColor(rgb: 0x8F92A1)
         salaryLabel.textAlignment = .left
         salaryLabel.text = "Уровень зарплат"
@@ -81,7 +80,7 @@ class HomeCell: UITableViewCell {
         salaryLabel.autoPinEdge(toSuperviewEdge: .right, withInset: 16)
         
         
-        salaryLevelLabel.font = UIFont(name: "SFProText-Semibold", size: 15)
+        salaryLevelLabel.font = UIFont.boldSystemFont(ofSize: 17)
         salaryLevelLabel.textColor = .black
         backView.addSubview(salaryLevelLabel)
         salaryLevelLabel.autoSetDimensions(to: CGSize(width: 160, height: 15))
@@ -91,9 +90,10 @@ class HomeCell: UITableViewCell {
         
         
         
-        vacancyCountLabel.font = UIFont(name: "SFProText-Regular", size: 8)
+        vacancyCountLabel.font = UIFont.systemFont(ofSize: 11)
         vacancyCountLabel.textColor = .black
-        vacancyCountLabel.adjustsFontSizeToFitWidth = true
+        vacancyCountLabel.textAlignment = .right
+//        vacancyCountLabel.adjustsFontSizeToFitWidth = true
         backView.addSubview(vacancyCountLabel)
         vacancyCountLabel.autoSetDimension(.width, toSize: 75)
         vacancyCountLabel.autoPinEdge(.top, to: .bottom, of: checkImageView, withOffset: 53)
@@ -110,13 +110,6 @@ class HomeCell: UITableViewCell {
 //        circleView.autoPinEdge(toSuperviewEdge: .bottom, withInset: 15, relation: .greaterThanOrEqual)
 //        circleView.autoAlignAxis(.horizontal, toSameAxisOf: vacancyCountLabel)
         
-
-
-        
-        
-        
-       
-
     }
 }
 

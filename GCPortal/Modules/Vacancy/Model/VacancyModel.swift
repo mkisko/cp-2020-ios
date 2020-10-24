@@ -13,19 +13,22 @@ struct VacancyModel: Decodable {
     let title: String
     let description: String
     let skills: [SkillModel]
+    let company: CompanyModel
     let minCost: Int
     let maxCost: Int
     let typeIntern: Int
     let user: UserModel
-    let expiried: Date
-    let publishedAt: Date
+    let expiried: String
+    let publishedAt: String
     let conditions: String
+    let city: String
     
     enum CodingKeys: String, CodingKey {
         case id             = "id"
         case title          = "title"
         case description    = "description"
         case skills         = "skills"
+        case company        = "company"
         case minCost        = "minCost"
         case maxCost        = "maxCost"
         case typeIntern     = "typeIntern"
@@ -33,5 +36,6 @@ struct VacancyModel: Decodable {
         case expiried       = "expired"
         case publishedAt    = "publichedAt"
         case conditions     = "conditions"
+        case city           = "city"
     }
 }

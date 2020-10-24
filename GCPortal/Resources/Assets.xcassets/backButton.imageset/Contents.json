@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "filter.png",
+      "filename" : "Left Accessory.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "filter@2x.png",
+      "filename" : "Left Accessory@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "filter@3x.png",
+      "filename" : "Left Accessory@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

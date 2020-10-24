@@ -19,7 +19,7 @@ enum TabBarItem: Int, CaseIterable {
         case .home:
             return HomeAssembly.assembleModule()
         case .vacancy:
-            return UIViewController()
+            return VacancyAssembly.assembleModule()
         case .feedback:
             return UIViewController()
         case .profile:

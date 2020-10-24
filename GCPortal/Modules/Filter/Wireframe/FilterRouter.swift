@@ -1,5 +1,5 @@
 //
-//  VacancyRouter.swift
+//  FilterRouter.swift
 //  GCPortal
 //
 //  Created by Айдин Абдурахманов on 24.10.2020.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-protocol VacancyRouterInput {
-    func openFilter()
+protocol FilterRouterInput {
+    
 }
 
-final class VacancyRouter {
+final class FilterRouter {
     
     weak var transition: ModuleTransitionHandler?
     
@@ -22,10 +22,6 @@ final class VacancyRouter {
     
 }
 
-extension VacancyRouter: VacancyRouterInput {
+extension FilterRouter: FilterRouterInput {
     
-    func openFilter() {
-        transition?.push(moduleType: FilterAssembly.self)
-    }
-
 }

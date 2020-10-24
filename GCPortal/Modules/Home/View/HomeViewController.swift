@@ -85,7 +85,6 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: HomeViewInput {
     
     func update(with viewModel: HomeViewModel) {
-        print(viewModel)
         self.viewModel = viewModel
         tableView.reloadData()
     }
