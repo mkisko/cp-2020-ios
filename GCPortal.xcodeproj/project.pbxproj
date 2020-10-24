@@ -78,6 +78,7 @@
 		1EC95E4325446CC4001D2242 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95E4225446CC4001D2242 /* FilterViewController.swift */; };
 		1EC95E4525446CD6001D2242 /* FilterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95E4425446CD6001D2242 /* FilterPresenter.swift */; };
 		1EC95E4725446CE9001D2242 /* FilterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95E4625446CE9001D2242 /* FilterInteractor.swift */; };
+		1EC95E4A25447A94001D2242 /* FilterVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC95E4925447A94001D2242 /* FilterVeiw.swift */; };
 		2798B64B9F33B5AA9BD7441B /* Pods_GCPortal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232B2463783029C1A0F0745F /* Pods_GCPortal.framework */; };
 /* End PBXBuildFile section */
 
@@ -155,6 +156,7 @@
 		1EC95E4225446CC4001D2242 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		1EC95E4425446CD6001D2242 /* FilterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPresenter.swift; sourceTree = "<group>"; };
 		1EC95E4625446CE9001D2242 /* FilterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterInteractor.swift; sourceTree = "<group>"; };
+		1EC95E4925447A94001D2242 /* FilterVeiw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVeiw.swift; sourceTree = "<group>"; };
 		232B2463783029C1A0F0745F /* Pods_GCPortal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GCPortal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2608B506B9276279B671AB32 /* Pods-GCPortal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCPortal.release.xcconfig"; path = "Target Support Files/Pods-GCPortal/Pods-GCPortal.release.xcconfig"; sourceTree = "<group>"; };
 		74F17CA8517E364986662C3D /* Pods-GCPortal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCPortal.debug.xcconfig"; path = "Target Support Files/Pods-GCPortal/Pods-GCPortal.debug.xcconfig"; sourceTree = "<group>"; };
@@ -530,6 +532,7 @@
 			isa = PBXGroup;
 			children = (
 				1EC95E102543CC77001D2242 /* ColorableNavigationController.swift */,
+				1EC95E4925447A94001D2242 /* FilterVeiw.swift */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -808,6 +811,7 @@
 				1EC95DEA2543AE98001D2242 /* HomeAssembly.swift in Sources */,
 				1EC95E3D25446C8B001D2242 /* FilterRouter.swift in Sources */,
 				1EC95E112543CC77001D2242 /* ColorableNavigationController.swift in Sources */,
+				1EC95E4A25447A94001D2242 /* FilterVeiw.swift in Sources */,
 				1EC95DD12543847C001D2242 /* Foundation+Extension.swift in Sources */,
 				1EC95DF92543B47B001D2242 /* MainTabBarControllerViewOutput.swift in Sources */,
 				1EC95DD425438748001D2242 /* HomeCell.swift in Sources */,
