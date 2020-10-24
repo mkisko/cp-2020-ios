@@ -16,12 +16,16 @@ final class FilterViewController: UIViewController {
 
     var presenter: FilterViewOutput?
     
+    private var salaryMinLabel = UILabel()
+    private var salaryMaxLabel = UILabel()
+    
+    private var slider = UISlider()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
     }
+    
     
 }
 
