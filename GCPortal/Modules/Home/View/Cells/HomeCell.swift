@@ -16,7 +16,7 @@ class HomeCell: UITableViewCell {
     var checkImageView = UIImageView()
     var salaryLabel = UILabel()
     var salaryLevelLabel = UILabel()
-    var circleView = UIView()
+//    var circleView = UIView()
     var vacancyCountLabel = UILabel()
     var vacancyStackView = UIStackView()
     
@@ -44,7 +44,7 @@ class HomeCell: UITableViewCell {
 
         fotoImageView.contentMode = .scaleAspectFit
         fotoImageView.cornerRadius = 10
-        fotoImageView.backgroundColor = .green
+        fotoImageView.backgroundColor = .clear
         backView.addSubview(fotoImageView)
         fotoImageView.autoSetDimensions(to: CGSize(width: 36, height: 36))
         fotoImageView.autoPinEdge(toSuperviewEdge: .top, withInset: 10)
@@ -60,7 +60,7 @@ class HomeCell: UITableViewCell {
         
         checkImageView.backgroundColor = .clear
         checkImageView.contentMode = .scaleAspectFit
-        checkImageView.backgroundColor = .black
+        checkImageView.image = UIImage(named: "check")
         backView.addSubview(checkImageView)
         checkImageView.autoSetDimensions(to: CGSize(width: 24, height: 24))
         checkImageView.autoPinEdge(toSuperviewEdge: .top, withInset: 17)
@@ -84,7 +84,7 @@ class HomeCell: UITableViewCell {
         salaryLevelLabel.font = UIFont(name: "SFProText-Semibold", size: 15)
         salaryLevelLabel.textColor = .black
         backView.addSubview(salaryLevelLabel)
-        salaryLevelLabel.autoSetDimensions(to: CGSize(width: 150, height: 15))
+        salaryLevelLabel.autoSetDimensions(to: CGSize(width: 160, height: 15))
         salaryLevelLabel.autoPinEdge(.top, to: .bottom, of: salaryLabel, withOffset: 4)
         salaryLevelLabel.autoPinEdge(toSuperviewEdge: .left, withInset: 14)
         salaryLevelLabel.autoPinEdge(toSuperviewEdge: .bottom, withInset: 15)
@@ -99,15 +99,16 @@ class HomeCell: UITableViewCell {
         vacancyCountLabel.autoPinEdge(.top, to: .bottom, of: checkImageView, withOffset: 53)
         vacancyCountLabel.autoPinEdge(toSuperviewEdge: .right, withInset: 14)
         vacancyCountLabel.autoPinEdge(toSuperviewEdge: .bottom, withInset: 15)
-//        circleView.autoPinEdge(.right, to: .left, of: vacancyCountLabel,withOffset: 4)
        
-        circleView.cornerRadius = 3
-        circleView.autoSetDimensions(to: CGSize(width: 6, height: 6))
-        backView.addSubview(circleView)
-        circleView.autoPinEdge(toSuperviewEdge: .top, withInset: 106)
-        circleView.autoPinEdge(.right, to: .left, of: vacancyCountLabel,withOffset: 4)
-        circleView.autoPinEdge(.left, to: .right, of: salaryLevelLabel)
-        circleView.autoPinEdge(toSuperviewEdge: .bottom,withInset: 15)
+//        circleView.cornerRadius = 3
+//        circleView.autoSetDimensions(to: CGSize(width: 6, height: 6))
+//        circleView.backgroundColor = .black
+//        backView.addSubview(circleView)
+//        circleView.autoPinEdge(toSuperviewEdge: .top, withInset: 95, relation: .lessThanOrEqual)
+//        circleView.autoPinEdge(.right, to: .left, of: vacancyCountLabel,withOffset: 4)
+//        circleView.autoPinEdge(.left, to: .right, of: salaryLevelLabel)
+//        circleView.autoPinEdge(toSuperviewEdge: .bottom, withInset: 15, relation: .greaterThanOrEqual)
+//        circleView.autoAlignAxis(.horizontal, toSameAxisOf: vacancyCountLabel)
         
 
 
@@ -131,6 +132,17 @@ extension HomeCell: Configurable {
             checkImageView.isHidden = false
         } else {
             checkImageView.isHidden = true
+        }
+        
+        switch model.id {
+        case 5:
+            fotoImageView.image = UIImage(named: "ava 2")
+            
+        case 6:
+            fotoImageView.image = UIImage(named: "ava 1")
+            
+        default:
+            fotoImageView.image = UIImage(named: "ava 3")
         }
         
         salaryLevelLabel.text = "\(model.salaryMin) - \(model.salaryMax) ₽"
