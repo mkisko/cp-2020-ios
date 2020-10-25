@@ -22,6 +22,7 @@ struct VacancyModel: Decodable {
     let publishedAt: String
     let conditions: String
     let city: String
+    let progress: Int
     
     enum CodingKeys: String, CodingKey {
         case id             = "id"
@@ -37,5 +38,6 @@ struct VacancyModel: Decodable {
         case publishedAt    = "publichedAt"
         case conditions     = "conditions"
         case city           = "city"
+        case progress       = "progress"
     }
 }

@@ -9,7 +9,7 @@
 import Foundation
 
 protocol FilterViewOutput: ViewOutput {
-    
+    func buttonTapped()
 }
 
 protocol FilterInteractorOutput: class {
@@ -25,7 +25,10 @@ final class FilterPresenter {
 }
 
 extension FilterPresenter: FilterViewOutput {
-    
+    func buttonTapped() {
+        router?.pop()
+    }
+
 }
 
 extension FilterPresenter: FilterInteractorOutput {

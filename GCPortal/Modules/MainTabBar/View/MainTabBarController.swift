@@ -23,7 +23,7 @@ enum TabBarItem: Int, CaseIterable {
         case .feedback:
             return UIViewController()
         case .profile:
-            return UIViewController()
+            return ProfileAssembly.assembleModule()
         }
     }
     

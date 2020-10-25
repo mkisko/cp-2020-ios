@@ -109,7 +109,6 @@ final class VacancyCell: UITableViewCell {
         percentLabel.autoPinEdge(toSuperviewEdge: .right, withInset: 18)
         percentLabel.autoPinEdge(.left, to: .right, of: progressLabel, withOffset: 10)
 
-        progressBar.setProgress(0.77, animated: true)
         progressBar.progressViewStyle = .bar
         progressBar.trackTintColor = UIColor(red: 0.561, green: 0.573, blue: 0.631, alpha: 0.2)
         backView.addSubview(progressBar)
@@ -163,10 +162,22 @@ extension VacancyCell: Configurable {
         
         costLabel.text = "\(model.maxCost) ₽"
         
-        percentLabel.text = "77%"
+        percentLabel.text = "\(model.progress) %"
         
-        progressBar.progressTintColor = .green
-        
+        switch model.progress {
+        case 75...100:
+            progressBar.progressTintColor = UIColor(rgb: 0x1BC5BD)
+            
+        case 50...74:
+            progressBar.progressTintColor = UIColor(rgb: 0xFFA800)
+            
+        case 25...49:
+            progressBar.progressTintColor = UIColor(rgb: 0xED6262)
+            
+        default:
+            progressBar.progressTintColor = UIColor(rgb: 0x000000)
+        }
+        progressBar.setProgress(Float(model.progress) / 100, animated: false)
         
     }
 }

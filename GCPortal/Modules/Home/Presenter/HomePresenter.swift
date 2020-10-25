@@ -9,7 +9,7 @@
 import Foundation
 
 protocol HomeViewOutput: ViewOutput {
-    
+    func didSelectCell()
 }
 
 protocol HomeInteractorOutput: class {
@@ -35,16 +35,22 @@ final class HomePresenter {
 extension HomePresenter: HomeViewOutput {
     
     func viewIsReady() {
-        let first = HomeModel(id: 5, status: 1, course: "1 семестр", vacancyCount: 5, salaryMin: 20000, salaryMax: 25000)
-        let second = HomeModel(id: 6, status: 1, course: "2 семестр", vacancyCount: 5, salaryMin: 20000, salaryMax: 25000)
-        let third = HomeModel(id: 7, status: 0, course: "3 семестр", vacancyCount: 7, salaryMin: 30000, salaryMax: 35000)
-        let fourty = HomeModel(id: 8, status: 0, course: "4 семестр", vacancyCount: 8, salaryMin: 30000, salaryMax: 40000)
-        let array = [first, second, third, fourty]
+        let first = HomeModel(id: 5, status: 1, course: "1 семестр", vacancyCount: 5, salaryMin: 20000, salaryMax: 25000, isCurrent: false)
+        let second = HomeModel(id: 6, status: 1, course: "2 семестр", vacancyCount: 5, salaryMin: 20000, salaryMax: 25000, isCurrent: true)
+        let third = HomeModel(id: 7, status: 0, course: "3 семестр", vacancyCount: 7, salaryMin: 30000, salaryMax: 35000, isCurrent: false)
+        let fourty = HomeModel(id: 8, status: 0, course: "4 семестр", vacancyCount: 8, salaryMin: 30000, salaryMax: 40000, isCurrent: false)
+        let five = HomeModel(id: 9, status: 0, course: "5 семестр", vacancyCount: 10, salaryMin: 30000, salaryMax: 40000, isCurrent: false)
+        let six = HomeModel(id: 10, status: 0, course: "6 семестр", vacancyCount: 11, salaryMin: 35000, salaryMax: 45000, isCurrent: false)
+        let array = [first, second, third, fourty, five, six]
         
         let viewModel = dataProvider.createViewModel(data: array)
         view?.update(with: viewModel)
     }
     
+    func didSelectCell() {
+        router?.openVacancy()
+    }
+
 }
 
 extension HomePresenter: HomeInteractorOutput {

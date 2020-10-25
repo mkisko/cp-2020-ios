@@ -54,7 +54,9 @@ final class HomeViewController: UIViewController {
 
 // MARK: - UITableViewDelegate
 extension HomeViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.didSelectCell()
+    }
 }
 
 

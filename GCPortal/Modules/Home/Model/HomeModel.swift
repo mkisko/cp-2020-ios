@@ -16,6 +16,7 @@ struct HomeModel: Decodable {
     let vacancyCount: Int
     let salaryMin: Int
     let salaryMax: Int
+    let isCurrent: Bool
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -24,6 +25,7 @@ struct HomeModel: Decodable {
         case vacancyCount = "vacancyCount"
         case salaryMin = "costMin"
         case salaryMax = "costMax"
+        case isCurrent = "current"
     }
     
 }

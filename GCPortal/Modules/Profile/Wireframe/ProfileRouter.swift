@@ -1,18 +1,18 @@
 //
-//  FilterRouter.swift
+//  ProfileRouter.swift
 //  GCPortal
 //
-//  Created by Айдин Абдурахманов on 24.10.2020.
+//  Created by Айдин Абдурахманов on 25.10.2020.
 //  Copyright © 2020 Айдин Абдурахманов. All rights reserved.
 //
 
 import Foundation
 
-protocol FilterRouterInput {
-    func pop()
+protocol ProfileRouterInput {
+    
 }
 
-final class FilterRouter {
+final class ProfileRouter {
     
     weak var transition: ModuleTransitionHandler?
     
@@ -22,9 +22,6 @@ final class FilterRouter {
     
 }
 
-extension FilterRouter: FilterRouterInput {
-    func pop() {
-        transition?.pop()
-    }
-
+extension ProfileRouter: ProfileRouterInput {
+    
 }

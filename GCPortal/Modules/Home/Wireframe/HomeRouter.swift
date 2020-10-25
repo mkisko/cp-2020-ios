@@ -9,7 +9,7 @@
 import Foundation
 
 protocol HomeRouterInput {
-    
+    func openVacancy()
 }
 
 final class HomeRouter {
@@ -23,5 +23,7 @@ final class HomeRouter {
 }
 
 extension HomeRouter: HomeRouterInput {
-    
+    func openVacancy() {
+        transition?.changeSelectedTabBarController(to: .vacancy)
+    }
 }

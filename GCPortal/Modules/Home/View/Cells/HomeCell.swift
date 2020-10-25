@@ -121,6 +121,10 @@ extension HomeCell: Configurable {
     func configure(with model: Model) {
         courseLabel.text = model.course
         
+        if model.isCurrent {
+            backView.borderWidth = 2
+            backView.borderColor = Colors.darkBlue
+        }
         if model.status == 1 {
             checkImageView.isHidden = false
         } else {
